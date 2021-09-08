@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="./index.js"></script> -->
+    <script src=" https://unpkg.com/axios/dist/axios.min.js "></script>
+    <script>
+        axios({
+            // mehtod: 'GET',
+            url: 'http://localhost:3000/posts',
+            params: {  //确定query参数，' params '是与请求一起发送的URL参数
+                id: 1
+            },
+
+        }).then(function (response) {
+            console.log(response.data, response.status, response.statusText);
+
+        }).catch(function (error) {
+            console.log(error.message);
+        });
+
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/posts',
+            data: {
+                title: '3',
+                author: '3'
+            }
+
+        }).then(function (response) {
+            console.log(response.data, response.status, response.statusText);
+
+        }).catch(function (error) {
+            console.log(error.message);
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
