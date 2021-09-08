@@ -1,4 +1,5 @@
 const express = require('express');
+
 const app = express();
 app.get('/zhuye', (req, res) => {
     res.send({ name: 'xiaoming', age: 2 })
